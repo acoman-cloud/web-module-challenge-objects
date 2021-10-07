@@ -109,7 +109,6 @@ function addReview(/*Your Code Here */array, name, rating, feedback){
   /*Your Code Here */
   array.push({name: name,rating: rating,feedback: feedback});
   return array;
-
 }
 
 console.log(addReview(reviews,'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
@@ -127,8 +126,9 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(/*Your code here*/array, index) {
   /*Your code here*/
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
 }
 
 
@@ -146,11 +146,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(/*Your code here*/array) {
   /*Your code here*/
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`
 } 
 
-
+console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
